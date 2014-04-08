@@ -1,7 +1,7 @@
 <?php 
 include 'init.php';
 
-if(empty($_POST === false)){
+if(empty($_POST) === FALSE){
 	$username = $_POST['username'];
 	$password = $_POST['password'];
 
@@ -19,7 +19,7 @@ if(empty($_POST === false)){
 			// exit();
 		}
 	}
-} else {
+}else{
 	$errors [] = 'No data recieved';
 }
 	output_errors($errors);

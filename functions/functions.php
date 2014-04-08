@@ -49,4 +49,9 @@ function logged_in() {
 	return (isset($_SESSION['user_id'])) ? true : false;
 }
 
+function getusername($user_id){
+    $user_id = mysql_real_escape_string($user_id);
+    $query = mysql_query("SELECT `username` FROM `users` WHERE `user_id` = '$user_id'");
+    return mysql_result($query, 0, 'username');
+}
 ?>

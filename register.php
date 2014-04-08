@@ -60,7 +60,7 @@
 				$username = $_POST["username"];
 
 				// Desired folder structure
-				$structure = './' . $username . '';
+				$structure = './Users/' . $username . '';
 
 				// To create the nested structure, the $recursive parameter 
 				// to mkdir() must be specified.
@@ -68,8 +68,6 @@
 
 				if (!file_exists($structure)) {
 				    mkdir($structure, 0777, true);
-				    mkdir($structure . '/css', 0777, true);
-				    mkdir($structure . '/js', 0777, true);
 				} else {
 				    echo 'Det blev fel';
 				}

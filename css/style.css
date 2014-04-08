@@ -1,0 +1,45 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+html{
+  height: 100%;
+  font-family:Georgia, Arial, serif;
+  
+}
+body {
+  min-height: 100%;
+  width: 100%;
+  //border: black solid 1px;
+}
+#mainContainer{
+    border: blue solid 1px;
+    min-height: 950px;
+    overflow: hidden;
+    
+}
+#header{
+    border: yellow solid 1px;
+    height: 150px;
+    width: 100%;
+
+}
+#menu{
+    border: red solid 1px;
+    width: 200px;
+    height: 800px;
+    float: left;
+
+}
+.undermenu{
+    display: none;
+}
+.undermenubutton{
+    display: none;
+}
+#secondContainer{
+    border: green solid 1px;
+    height: 800px;
+    position: relative;
+    overflow: hidden;
+}

@@ -3,6 +3,8 @@
     <div id="menu">Menu<?php
     include 'Buttons.php';
     ?></div>
-    <div id="secondContainer">SecondContainer</div>
+    <div id="secondContainer">SecondContainer
+    	<?php include 'codemirror.php'; ?>
+    </div>
         
 </div>

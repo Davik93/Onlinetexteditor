@@ -8,14 +8,14 @@
     
 
 
-    if ($handle = opendir('/Users/' . $username . '/')) {
+    if ($handle = opendir('./Users/' . $username . '/')) {
         while (false !== ($entry = readdir($handle))) {
             if ($entry != "." && $entry != "..") {
                 
                 echo '<a class="button2" href="#">' . $entry . '</a>';
                 echo '<br>';
                 echo '<div class="undermenubutton">';
-                    if($handle2 = opendir('/Users/' . $username . '/'.$entry.'/')){
+                    if($handle2 = opendir('./Users/' . $username . '/'.$entry.'/')){
                         while (false !== ($entry2 = readdir($handle2))){
                            if($entry2 != "." && $entry2 != ".."){
                                echo $entry2;

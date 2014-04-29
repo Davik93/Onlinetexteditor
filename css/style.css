@@ -1,22 +1,22 @@
 *{
-  margin: 0;
-  padding: 0;
+    margin: 0;
+    padding: 0;
 }
 html{
-  height: 100%;
-  font-family:Georgia, Arial, serif;
-  
+    height: 100%;
+    font-family:Georgia, Arial, serif;
+
 }
 body {
-  min-height: 100%;
-  width: 100%;
-  //border: black solid 1px;
+    min-height: 100%;
+    width: 100%;
+    //border: black solid 1px;
 }
 #mainContainer{
     border: blue solid 1px;
     min-height: 950px;
     overflow: hidden;
-    
+
 }
 #header{
     border: yellow solid 1px;
@@ -29,7 +29,6 @@ body {
     width: 200px;
     height: 800px;
     float: left;
-
 }
 
 #secondContainer{
@@ -38,3 +37,177 @@ body {
     position: relative;
     overflow: hidden;
 }
+/*Login page and reg page*/
+.title{
+    font-size: 100px;
+    text-align: center;
+    color: green;
+    text-shadow: 0px 5px 5px #888;
+    min-width: 600px;
+    height: 100px;
+
+}
+div div h1{
+    color: #333333;
+    opacity: 0.4;
+    text-align: center;
+    text-shadow: 0px 5px 5px #888;
+}
+/*Main containers for forms*/
+.login-form-container{
+    min-height: 350px;
+    min-width: 400px;
+    position: absolute;
+    border-radius: 2px;
+    margin: -200px 0 0 -200px;
+    left: 50%;
+    top: 50%;
+
+}
+.reg-form-container{
+    height: 450px;
+    width: 500px;
+    position: absolute;
+    border-radius: 2px;
+    margin: -250px 0 0 -250px;
+    left: 50%;
+    top: 50%;
+
+
+}
+
+/*Second container for forms*/
+.login-form-second-container{
+    border-top: #009933 solid 20px;
+    width: 350px;
+    height: 300px;
+    position: absolute;
+    box-shadow: 0px 10px 5px #888;
+    -webkit-box-shadow: 0px 10px 5px #888;
+    -o-box-shadow: 0px 10px 5px #888;
+    border-radius: 4px;
+    /*Centering Method 2*/
+    margin: -160px 0 0 -173px;
+    left: 50%;
+    top: 50%;
+    z-index: 2;
+    
+
+}
+.reg-form-second-container{
+    border-top: #009933 solid 20px;
+    width: 460px;
+    height: 400px;
+    position: absolute;
+    box-shadow: 0px 10px 5px #888;
+    -webkit-box-shadow: 0px 10px 5px #888;
+    -o-box-shadow: 0px 10px 5px #888;
+    border-radius: 4px;
+    /*Centering Method 2*/
+    margin: -200px 0 0 -230px;
+    left: 50%;
+    top: 50%;
+    z-index: 2;
+
+}
+/*forms in second container*/
+.login-form{
+    margin-top: 40px;
+
+}
+.reg-form{
+    margin-left: 15px;
+    margin-top: 20px;
+
+    height: 335px;
+    width: 430px;
+
+}
+/*input text holder for forms*/
+.login-form-input-text-holder{
+   font-size: 20px;
+   width: 250px;
+   margin-left: 35px;
+   
+}
+.reg-form-input-text-holder{
+   font-size: 20px;
+   width: 250px;
+   margin-left: 80px;
+
+}
+/*input lenght and height in input text holder*/
+.login-input{
+    height: 22px;
+    width: 215px;
+    margin-left: 30px;
+}
+.reg-input{
+    height: 22px;
+    width: 215px;
+
+}
+/*Error holder for login and reg form*/
+.error-holder{
+    color: #ff0033;
+    width: 380px;
+    height: 80px;
+    margin-left: 22px;
+
+}
+/*Button holder in form login and reg*/
+.login-form-btn-holder{
+    margin-left: 50px;
+    position: relative;
+    width: 250px;
+    margin-top: 40px;
+}
+.reg-form-btn-holder{
+    margin-left: 80px;
+    width: 250px;
+    margin-top: 10px;
+
+}
+
+.login-form-btn-holder input,.reg-form-btn-holder input{
+   width: 250px;
+}
+.form-btn{
+	-moz-box-shadow:inset 0px 1px 0px 0px #9acc85;
+	-webkit-box-shadow:inset 0px 1px 0px 0px #9acc85;
+	box-shadow:inset 0px 1px 0px 0px #9acc85;
+	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #74ad5a), color-stop(1, #68a54b));
+	background:-moz-linear-gradient(top, #74ad5a 5%, #68a54b 100%);
+	background:-webkit-linear-gradient(top, #74ad5a 5%, #68a54b 100%);
+	background:-o-linear-gradient(top, #74ad5a 5%, #68a54b 100%);
+	background:-ms-linear-gradient(top, #74ad5a 5%, #68a54b 100%);
+	background:linear-gradient(to bottom, #74ad5a 5%, #68a54b 100%);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#74ad5a', endColorstr='#68a54b',GradientType=0);
+	background-color:#74ad5a;
+	border:1px solid #3b6e22;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:arial;
+	font-size:13px;
+	font-weight:bold;
+	padding:6px 12px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #75f222;
+}
+
+.form-btn:hover {
+	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #68a54b), color-stop(1, #74ad5a));
+	background:-moz-linear-gradient(top, #68a54b 5%, #74ad5a 100%);
+	background:-webkit-linear-gradient(top, #68a54b 5%, #74ad5a 100%);
+	background:-o-linear-gradient(top, #68a54b 5%, #74ad5a 100%);
+	background:-ms-linear-gradient(top, #68a54b 5%, #74ad5a 100%);
+	background:linear-gradient(to bottom, #68a54b 5%, #74ad5a 100%);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#68a54b', endColorstr='#74ad5a',GradientType=0);
+	background-color:#68a54b;
+}
+.form-btn:active {
+	position:relative;
+	top:1px;
+}
+

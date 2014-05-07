@@ -6,43 +6,117 @@
 $user_id = $_SESSION['user_id'];
 $username = getusername($user_id);
 ?>
-<ul>
-    <li><a href="#">list project</a>
 
+    <div class="menuholder">
         <ul>
-            <?php
-            if ($handle = opendir('./Users/' . $username . '/')) {
-                while (false !== ($entry = readdir($handle))) {
-                    if ($entry != "." && $entry != "..") {
+            <li><a class="menubtn" href="#">List project</a>
 
-                        echo '<li><a href="#">' . $entry . '</a></li>';
+                <ul class="sub">
+                    <?php
+                    if ($handle = opendir('./Users/' . $username . '/')) {
+                        while (false !== ($entry = readdir($handle))) {
+                            if ($entry != "." && $entry != "..") {
+
+                                echo '<li><a class="submenubtn" href="#">' . $entry . '</a></li>';
+                            }
+                        }
+                        closedir($handle);
                     }
-                }
-                closedir($handle);
-            }
-            ?>
+                    ?>
+                </ul>
+            </li>
+            <li><a class="menubtn" href="#">Create project</a>
+                <ul class="sub">
+                    <li class="specialbtn"><?php include './Forms/create-project-form.php'; ?></li>
+                </ul>
+
+            </li>
+            <li><a class="menubtn" href="#">Parent 3</a>
+
+                <ul class="sub">
+                    <li><a class="submenubtn" href="#">Parent 3 &raquo; Child 3</a>
+                    </li> 
+                </ul>
+            </li>
+            <li><a class="menubtn" href="Index.php?page=settings">Settings</a>
+                <ul>
+
+                </ul>
+            </li>
+            <li><a class="menubtn" href="logout.php">Logga ut</a></li>
         </ul>
 
-    </li>
-    <li><a href="#">Create project</a>
+    </div>
+
+<style>
+    .specialbtn{
+        opacity: 0.6;
+        height: 30px;
+        width: 200px;
+        background-color:#74ad5a;
+    }
+    .submenubtn{
+        opacity: 0.6;
+    }
+    .submenubtn:hover{
+        opacity: 0.7;
+    }
+    .menubtn, .submenubtn {
+        -moz-box-shadow:inset 0px 1px 0px 0px #9acc85;
+        -webkit-box-shadow:inset 0px 1px 0px 0px #9acc85;
+        box-shadow:inset 0px 1px 0px 0px #9acc85;
+        background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #74ad5a), color-stop(1, #68a54b));
+        background:-moz-linear-gradient(top, #74ad5a 5%, #68a54b 100%);
+        background:-webkit-linear-gradient(top, #74ad5a 5%, #68a54b 100%);
+        background:-o-linear-gradient(top, #74ad5a 5%, #68a54b 100%);
+        background:-ms-linear-gradient(top, #74ad5a 5%, #68a54b 100%);
+        background:linear-gradient(to bottom, #74ad5a 5%, #68a54b 100%);
+        filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#74ad5a', endColorstr='#68a54b',GradientType=0);
+        background-color:#74ad5a;
+        border:1px solid #3b6e22;
+        display:inline-block;
+        cursor:pointer;
+        color:#ffffff;
+        font-family:arial;
+        font-size:13px;
+        font-weight:bold;
+        padding:6px 12px;
+        width: 174px;
+        height: 25px;
+        text-align: center;
+        line-height: 25px;
+        text-decoration:none;
+    }
+    .menubtn:hover , .submenubtn:hover{
+        background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #68a54b), color-stop(1, #74ad5a));
+        background:-moz-linear-gradient(top, #68a54b 5%, #74ad5a 100%);
+        background:-webkit-linear-gradient(top, #68a54b 5%, #74ad5a 100%);
+        background:-o-linear-gradient(top, #68a54b 5%, #74ad5a 100%);
+        background:-ms-linear-gradient(top, #68a54b 5%, #74ad5a 100%);
+        background:linear-gradient(to bottom, #68a54b 5%, #74ad5a 100%);
+        filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#68a54b', endColorstr='#74ad5a',GradientType=0);
+        background-color:#68a54b;
+    }
+    .menubtn:active, .submenubtn:active {
+        position:relative;
+        top:1px;
+    }
+    ul{
+        list-style: none;
+    }
 
 
-    </li>
-    <li><a href="#"></a></li>
-    <li><a href="#">Settings</a></li>
+    .sub {
+        display: none;
+    }
 
-</ul>
-
-
+</style>
 
 <script>
     $(document).ready(function() {
         $("li").click(function() {
-            //Toggle the child but don't include them in the hide selector using .not()
             $('li > ul').not($(this).children("ul").toggle()).hide();
 
         });
     });
-
-
 </script>

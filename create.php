@@ -1,9 +1,12 @@
-<?php
 
+<?php
+include './init.php';
+$user_id = $_SESSION['user_id'];
+$username = getusername($user_id);
 $main = $_POST["Main"];
 
 // Desired folder structure
-$structure = './' . $main . '';
+$structure = './Users/'.$username.'/' . $main . '';
 
 // To create the nested structure, the $recursive parameter 
 // to mkdir() must be specified.
@@ -11,26 +14,25 @@ $structure = './' . $main . '';
 
 if (!file_exists($structure)) {
     mkdir($structure, 0777, true);
-    mkdir($structure . '/css', 0777, true);
-    mkdir($structure . '/js', 0777, true);
+    
 } else {
     echo 'Det blev fel';
 }
 
 
-$ourFileName = ''.$main.'/Index.php';
+$ourFileName = ''.$structure.'/Index.php';
 $ourFileHandle = fopen($ourFileName, 'w') or die("can't open file");
 fclose($ourFileHandle);
 
-$ourFileName2 = ''.$main.'/css/style.css';
+$ourFileName2 = ''.$structure.'/style.css';
 $ourFileHandle2 = fopen($ourFileName2, 'w') or die("can't open file");
 fclose($ourFileHandle2);
 
-$ourFileName3 = ''.$main.'/js/script.js';
+$ourFileName3 = ''.$structure.'/script.js';
 $ourFileHandle3 = fopen($ourFileName3, 'w') or die("can't open file");
 fclose($ourFileHandle3);
 
-$file = ''.$main.'/Index.php';
+$file = ''.$structure.'/Index.php';
 $htmltags = '<!DOCTYPE html>
 <html>
     <head>

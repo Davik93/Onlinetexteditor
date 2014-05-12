@@ -31,11 +31,12 @@ $username = getusername($user_id);
                 </ul>
 
             </li>
-            <li><a class="menubtn" href="#">Parent 3</a>
+            <li><a class="menubtn" href="#">Create database</a>
 
                 <ul class="sub">
-                    <li><a class="submenubtn" href="#">Parent 3 &raquo; Child 3</a>
+                    <li class="specialbtn"><?php include './Forms/create-database-form.php';?>
                     </li> 
+                     <li><a class="submenubtn" href="http://localhost/phpmyadmin/index.php" target="_blank">Handle Tables</a></li>
                 </ul>
             </li>
             <li><a class="menubtn" href="Index.php?page=settings">Settings</a>
@@ -51,7 +52,7 @@ $username = getusername($user_id);
 <style>
     .specialbtn{
         opacity: 0.6;
-        height: 30px;
+        height: 40px;
         width: 200px;
         background-color:#74ad5a;
     }

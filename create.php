@@ -37,8 +37,8 @@ $htmltags = '<!DOCTYPE html>
 <html>
     <head>
         <title>'.$main.'</title>
-        <link rel="stylesheet" href="css/style.css" type="text/css">
-        <script src="js/script.js"></script>
+        <link rel="stylesheet" href="style.css" type="text/css">
+        <script src="script.js"></script>
     </head>
     <body>
         <div></div>

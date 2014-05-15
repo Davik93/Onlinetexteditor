@@ -1,5 +1,5 @@
 <div id="mainContainer">
-    <div id="header"><p>WpmEditor</p></div>
+    <div id="header"><p><a href="index.php">WpmEditor</a></p></div>
 
 
         <div id="menu"><?php

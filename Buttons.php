@@ -38,9 +38,10 @@ $username = getusername($user_id);
                      <li><a class="submenubtn" href="http://localhost/phpmyadmin/index.php" target="_blank">Handle Tables</a></li>
                 </ul>
             </li>
-            <li><a class="menubtn" href="Index.php?page=settings">Settings</a>
-                <ul>
-
+            <li><a class="menubtn" href="#">Settings</a>
+                <ul class="sub">
+                    <li><a class="submenubtn" href="index.php?page=settings&changepass">Change Password</a></li>
+                    <li><a class="submenubtn" href="index.php?page=settings&changeemail">Change Email</a></li>
                 </ul>
             </li>
             <li><a class="menubtn" href="logout.php">Logga ut</a></li>

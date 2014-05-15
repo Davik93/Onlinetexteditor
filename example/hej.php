@@ -1,5 +1,5 @@
 <?php
-	$lol = "texttext";
-	echo $lol;
+
+echo "Hello World!";
+
 ?>
-	

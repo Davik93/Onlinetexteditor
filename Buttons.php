@@ -16,8 +16,7 @@ $username = getusername($user_id);
                     if ($handle = opendir('./Users/' . $username . '/')) {
                         while (false !== ($entry = readdir($handle))) {
                             if ($entry != "." && $entry != "..") {
-
-                                echo '<li><a class="submenubtn" href="#">' . $entry . '</a></li>';
+                                echo '<li><a class="submenubtn" href="?project='. $entry . '">' . $entry . '</a></li>';
                             }
                         }
                         closedir($handle);

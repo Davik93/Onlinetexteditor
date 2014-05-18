@@ -6,6 +6,8 @@
         <script src="js/script.js"></script>
     </head>
     <body>
-        <div></div>
+        <div>
+			<?php echo "Hello World!"; ?>
+		</div>
     </body>
 </html>

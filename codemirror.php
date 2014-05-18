@@ -3,11 +3,12 @@
 $user_id = $_SESSION['user_id'];
 $username = getusername($user_id);
 
+$projectName = $_GET['project'];
 
 if (isset($_POST['laddaFil'])) {
 
 	$select = $_POST['select'];
-	$file = './Users/'.$username.'/hello/' . $select;
+	$file = './Users/'.$username.'/'.$projectName.'/' . $select;
 
 } else if (isset($_POST['spara'])) {
 	$code = $_POST['codeEdit'];
@@ -16,7 +17,7 @@ if (isset($_POST['laddaFil'])) {
 	if(empty($fileName)) {
 		echo "<br /> you need to enter a filename";
 	} else {
-		$handle = fopen('./Users/'.$username.'/hello/' . $fileName, "w+");
+		$handle = fopen('./Users/'.$username.'/'.$projectName.'/' . $fileName, "w+");
 		fwrite($handle, $code);
 		fclose($handle);
 		echo "Saved!";
@@ -25,7 +26,7 @@ if (isset($_POST['laddaFil'])) {
 
 	if (!empty($_POST['fileName'])) {
 		$getfileName = $_POST['fileName'];
-		$fileName = './Users/'.$username.'/hello/' . $getfileName;
+		$fileName = './Users/'.$username.'/'.$projectName.'/' . $getfileName;
 		unlink($fileName);
 	} else {
 		echo "Du måste ladda den fil du vill ta bort";
@@ -50,7 +51,7 @@ if (isset($_POST['laddaFil'])) {
 <select name="select">
 
 <?php 
-if ($handle = opendir('./Users/'.$username.'/hello/')) {
+if ($handle = opendir('./Users/'.$username.'/'.$projectName.'/')) {
 	while (false !== ($entry = readdir($handle))) {
 		if ($entry != "." && $entry != "..") {
 			echo '<option>' . $entry .'</option>';

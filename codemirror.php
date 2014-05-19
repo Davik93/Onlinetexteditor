@@ -35,10 +35,10 @@ if (isset($_POST['laddaFil'])) {
 } else if (isset($_POST['taBortProjekt'])) {
 	$pathToProject = './Users/'.$username.'/'.$projectName .'/';
 	$project = $pathToProject;
-
 	remove_project($project);
-	header("Location: index.php");
 	
+	header("Location: index.php");
+	exit();
 }
 
 

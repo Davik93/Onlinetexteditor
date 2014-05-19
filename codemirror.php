@@ -32,6 +32,13 @@ if (isset($_POST['laddaFil'])) {
 		echo "Du måste ladda den fil du vill ta bort";
 	}
 
+} else if (isset($_POST['taBortProjekt'])) {
+	$pathToProject = './Users/'.$username.'/'.$projectName .'/';
+	$project = $pathToProject;
+
+	remove_project($project);
+	header("Location: index.php");
+	
 }
 
 
@@ -70,6 +77,11 @@ if ($handle = opendir('./Users/'.$username.'/'.$projectName.'/')) {
 <input type="submit" value="Spara" name="spara">
 
 <input type="submit" onclick="return(confirm('Är du säker på att du vill ta bort?'));" value="Ta bort" name="taBortFil">
+
+<input type="submit" onclick="return(confirm('Är du säker på att du vill ta bort projektet: <?php echo $projectName ?>
+\n Du kan inte ångra dig sen.'));" 
+value="Ta bort Projekt" name="taBortProjekt">
+
 
 <textarea rows="4" cols="50" id="codeEdit" name="codeEdit">
 <?php

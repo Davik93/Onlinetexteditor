@@ -1,5 +1,19 @@
 <?php
 
+function remove_project($project) {
+	if (is_dir($project)) {
+	    $files = glob($project . '*', GLOB_MARK); //GLOB_MARK adds a slash to directories returned
+
+        foreach ($files as $file) {
+            remove_project($file);
+        }
+
+        rmdir($project);
+    } elseif (is_file($project)) {
+	    unlink($project);
+    }
+}
+
 function output_errors($errors) {
 	$output = array();
 	foreach ($errors as $error) {

@@ -13,7 +13,9 @@ while ($row = mysql_fetch_array($res1)) {
 ?>
 <form action="update-user-info.php" method="post">
             Change password:
-            <input type="password" name="password">
-            <input type="submit" value="update">
+            <input id="password" type="password" name="password">
+            <div class="position-dialog-btn">
+            <input class="dialog-btn" type="submit" value="update">
+            </div>
             
         </form>

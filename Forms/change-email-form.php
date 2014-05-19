@@ -13,7 +13,8 @@ while ($row = mysql_fetch_array($res1)) {
 ?>
 <form action="update-user-info.php" method="post">
             Change email:
-            <input type="text" name="email" value="<?php echo $email;?>">
-            <input type="submit" value="update">
-            
+            <input id="email" type="text" name="email" value="<?php echo $email;?>">
+            <div class="position-dialog-btn">
+            <input class="dialog-btn" type="submit" value="update">
+            </div>
         </form>

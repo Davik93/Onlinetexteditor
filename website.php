@@ -3,7 +3,7 @@
 <script src="js/jquery-ui-1.10.4.custom.js"></script>
 
 <div id="mainContainer">
-    <div id="header"><p><a href="index.php">WpmEditor</a></p></div>
+    <div id="header"><p><a href="index.php"><img id="logga" src="css/Logga.png"></a></p></div>
 
 
         <div id="menu"><?php

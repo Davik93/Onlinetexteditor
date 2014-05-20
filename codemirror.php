@@ -82,8 +82,9 @@ if ($handle = opendir('./Users/'.$username.'/'.$projectName.'/')) {
 \n Du kan inte ångra dig sen.'));" 
 value="Ta bort Projekt" name="taBortProjekt">
 
-
+<div class="codemirrorholder">
 <textarea rows="4" cols="50" id="codeEdit" name="codeEdit">
+
 <?php
 
 if (!empty($file)) {
@@ -93,7 +94,7 @@ if (!empty($file)) {
 ?>
 
 </textarea>
-
+</div>
 </form>
 
 
@@ -118,11 +119,12 @@ if (!empty($file)) {
 	        mode: "application/x-httpd-php",
 	        theme: "default",
 	        indentUnit: 4,
-	        indentWithTabs: true
+	        indentWithTabs: true,
+                
 
 	    });
 
-	    editableCodeMirror.setSize(700, 300);
+	    editableCodeMirror.setSize(800, 755);
     }
 </script>
 

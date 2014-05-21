@@ -74,7 +74,7 @@ if (isset($_GET['success']) && empty($_GET['success'])) {
         }
 
         header('Location: index.php?page=register.php?success');
-        exit();
+        exit;
     }
 }
 include './Forms/Register-form.php';

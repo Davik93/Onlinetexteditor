@@ -48,5 +48,5 @@ file_put_contents($file, $htmltags, FILE_APPEND | LOCK_EX);
 
 
 header('Location: Index.php');
-exit();
+exit;
 ?>

@@ -7,9 +7,6 @@
   border: 1px solid #eee;
   height: 500px;
   min-width: 500px;
-  margin-right: 80px;
-  margin-top: 40px;
-  left: 40px;
 }
 .CodeMirror-scroll {
   /* Set scrolling behaviour here */

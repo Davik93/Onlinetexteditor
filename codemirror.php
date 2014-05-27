@@ -53,44 +53,51 @@ if (isset($_POST['laddaFil'])) {
     <body>
 
         <form action="" method="post">
-            <div class="editor-menuholder">
-                <div class="editor-div">
-                    <select name="select">
 
-<?php
-if ($handle = opendir('./Users/' . $username . '/' . $projectName . '/')) {
-    while (false !== ($entry = readdir($handle))) {
-        if ($entry != "." && $entry != "..") {
-            echo '<option>' . $entry . '</option>';
-        }
-    }
-    closedir($handle);
-}
-?>
 
-                    </select>
 
-                    <input type="submit" value="Ladda" name="laddaFil" />
-                </div>
-                <div class="editor-div">
-                <input type="text" name="fileName" value="<?php if (!empty($select)) echo $select; ?>" />
 
-                <input type="submit" value="Spara" name="spara" />
-                </div>
-                <div class="editor-div">
-                <input type="submit" onclick="return(confirm('Är du säker på att du vill ta bort?'));" value="Ta bort" name="taBortFil" />
-                </div>
-                <div class="editor-div">
-                <input type="submit" onclick="return(confirm('Är du säker på att du vill ta bort projektet: <?php echo $projectName ?>
-                \n Du kan inte ångra dig sen.'));" 
-                       value="Ta bort Projekt" name="taBortProjekt" />
-                </div>
-                <div class="editor-div">
-                <input type="submit" value="Visa Projekt" name="visaProjekt" />
-                </div>
-            </div>
 
-          
+
+
+
+
+
+
+
+
+
+
+
+            <div id="edit-holder-code">
+                <div class="header-holder-edit">
+                    <div class="load-holder">
+                        <select name="select">
+
+                            <?php
+                            if ($handle = opendir('./Users/' . $username . '/' . $projectName . '/')) {
+                                while (false !== ($entry = readdir($handle))) {
+                                    if ($entry != "." && $entry != "..") {
+                                        echo '<option>' . $entry . '</option>';
+                                    }
+                                }
+                                closedir($handle);
+                            }
+                            ?>
+
+                        </select>
+
+                        <input class="edit-btn" type="submit" value="Load" name="laddaFil" />
+                        <div class="showdelete-holder">
+                            <input class="edit-btn" type="submit" value="Show project" name="visaProjekt" />
+                            <input class="edit-btn" type="submit" onclick="return(confirm('Är du säker på att du vill ta bort projektet: <?php echo $projectName ?>
+                                            \n Du kan inte ångra dig sen.'));" 
+                                   value="Delete project" name="taBortProjekt" />
+                        </div>
+                    </div>
+                </div>
+
+
                 <textarea rows="4" cols="50" id="codeEdit" name="codeEdit">
 
                     <?php
@@ -100,7 +107,15 @@ if ($handle = opendir('./Users/' . $username . '/' . $projectName . '/')) {
                     ?>
 
                 </textarea>
-          
+                <div class="footer-holder">
+                    <div class="name-holder-code">
+                        File/<input  type="text" name="fileName" value="<?php if (!empty($select)) echo $select; ?>" />
+                        <input class="edit-btn" type="submit" onclick="return(confirm('Är du säker på att du vill ta bort?'));" value="Delete file" name="taBortFil" />
+                        <input class="edit-btn" type="submit" value="Save" name="spara" />
+
+                    </div>
+                </div>
+            </div>
         </form>
 
 
@@ -117,20 +132,20 @@ if ($handle = opendir('./Users/' . $username . '/' . $projectName . '/')) {
         <script src="mode/php/php.js"></script>
 
         <script type="text/javascript">
-            window.onload = function() {
-                var editableCodeMirror = CodeMirror.fromTextArea(document.getElementById('codeEdit'), {
-                    lineNumbers: true,
-                    matchBrackets: true,
-                    autoCloseBrackets: true,
-                    mode: "application/x-httpd-php",
-                    theme: "default",
-                    indentUnit: 4,
-                    viewportMargin: Infinity,
-                    indentWithTabs: true,
-                });
+                        window.onload = function() {
+                            var editableCodeMirror = CodeMirror.fromTextArea(document.getElementById('codeEdit'), {
+                                lineNumbers: true,
+                                matchBrackets: true,
+                                autoCloseBrackets: true,
+                                mode: "application/x-httpd-php",
+                                theme: "default",
+                                indentUnit: 4,
+                                viewportMargin: Infinity,
+                                indentWithTabs: true,
+                            });
 
-                
-            }
+
+                        }
         </script>
 
     </body>

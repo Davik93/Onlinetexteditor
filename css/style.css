@@ -173,10 +173,10 @@ ul{
 }
 .header-holder-edit{
     height: 40px;
-    border:#f7f7f7 solid 1px;
+    border:#e2e2e2 solid 1px;
     border-top-left-radius: 40px;
     border-top-right-radius: 40px;
-    background-color: #f7f7f7;
+    background-color: #e2e2e2;
 }
 .load-holder{
     margin-left:40px;
@@ -195,13 +195,13 @@ ul{
    
 }
 .footer-holder{
-    border:#f7f7f7 solid 1px;
+    border:#e2e2e2 solid 1px;
     height: 40px;
     width: 400px;
     float: right;
     border-bottom-left-radius: 40px;
     border-bottom-right-radius: 40px;
-    background-color: #f7f7f7;
+    background-color: #e2e2e2;
 }
 .name-holder-code{
     

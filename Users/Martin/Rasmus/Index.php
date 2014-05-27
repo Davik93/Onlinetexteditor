@@ -1,4 +1,5 @@
-<!DOCTYPE html>
+
+                    <!DOCTYPE html>
 <html>
     <head>
         <title>Rasmus</title>
@@ -6,6 +7,7 @@
         <script src="script.js"></script>
     </head>
     <body>
-        <div></div>
+		<div><h1>Det funkar</h1></div>
     </body>
 </html>
+                

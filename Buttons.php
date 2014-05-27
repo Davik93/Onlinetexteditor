@@ -43,7 +43,7 @@ include './Dialogboxes/dialogboxes.php';
                 <li><a id="change-email" href="#">Change Email</a></li>
             </ul>
         </li>
-        <li><a class="menubtn" href="logout.php">Logga ut</a></li>
+        <li><a class="menubtn" href="logout.php">Sign out</a></li>
     </ul>
 
 </div>

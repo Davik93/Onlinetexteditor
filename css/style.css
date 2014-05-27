@@ -54,8 +54,8 @@ body {
     left:0px;
     right:0;
     z-index:1;
-    border-right: #cccccc solid 5px;
-    border-radius: 1px;
+    background-color: #f3f3f3;
+    
 
 }
 .menuholder{
@@ -158,9 +158,16 @@ ul{
     overflow: hidden;
     position: absolute;
 }
-.codemirrorholder{
-    margin-top: 10px;
+.editor-menuholder{
+    border: red solid 1px;
+    width: 200px;
+    float: left;
 }
+.editor-div{
+    height: 40px;
+    border:orange solid 1px;
+}
+
 
 /*Login page and reg page*/
 .title{

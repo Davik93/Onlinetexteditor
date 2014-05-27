@@ -1,4 +1,4 @@
-<h1 class="title">Some Title</h1>
+<div class="headerholder"><img id="loginlogga" src="css/Logga.png"></div> 
 <div class="reg-form-container">
     <div class="reg-form-second-container">
         <h1>Sign up</h1>
@@ -6,7 +6,7 @@
             <div class="reg-form-input-text-holder">
                 Username:<br> <input class="reg-input" type="text" name="username" /> <br />
                 Password:<br> <input class="reg-input" type="password" name="password" /> <br />
-                Password again:<br> <input class="reg-input" type="password" name="passwordAgain" /> <br />
+               Confirm Password:<br> <input class="reg-input" type="password" name="passwordAgain" /> <br />
                 Email:<br> <input class="reg-input" type="text" name="email" /> <br />
             </div>
             <div class="error-holder">

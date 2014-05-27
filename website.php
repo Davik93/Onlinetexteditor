@@ -1,6 +1,4 @@
-<link href="css/smoothness/jquery-ui-1.10.4.custom.css" rel="stylesheet">
-<script src="js/jquery-1.10.2.js"></script>
-<script src="js/jquery-ui-1.10.4.custom.js"></script>
+
 
 <div id="mainContainer">
     <div id="header"><a href="index.php"><img id="logga" src="css/Logga.png"></a></div>

@@ -5,20 +5,13 @@ $user_id = $_SESSION['user_id'];
 $username = getusername($user_id);
 $main = $_POST["Main"];
 
-// Desired folder structure
-$structure = './Users/'.$username.'/' . $main . '';
 
-// To create the nested structure, the $recursive parameter 
-// to mkdir() must be specified.
-
-
-if (!file_exists($structure)) {
-    mkdir($structure, 0777, true);
-    
+$structure = './Users/'.$username.'/' . $main . ''; //Strukturen för vart projektmapparna kommer skapas.
+if (!file_exists($structure)) {     //Kollar om projektnamnet är upptaget eller ej
+    mkdir($structure, 0777, true); //Skapar mapp med standars rättigheter
 } else {
-    echo 'Det blev fel';
+    echo 'Det blev fel'; //mappen finns redan
 }
-
 
 $ourFileName = ''.$structure.'/Index.php';
 $ourFileHandle = fopen($ourFileName, 'w') or die("can't open file");

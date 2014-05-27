@@ -38,6 +38,11 @@ body {
     height: 115px;
     width: 600px;
 }
+.headerholder{
+    margin-left: 35%;
+    margin-right: 35%;
+    margin-top: 10px;
+}
 
 /*Menu code starts here*/
 #menu{

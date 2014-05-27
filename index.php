@@ -18,9 +18,9 @@ include 'init.php';
             include './website.php';
         } else {
             ?>
-            <h1 class="title">Some Title</h1>
+        
             <div id="main-container">
-
+            <div class="headerholder"><img id="loginlogga" src="css/Logga.png"></div> 
                 <?php
                 include './Forms/login-form.php';
                 ?>

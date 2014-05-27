@@ -16,7 +16,7 @@ if(empty($_POST) === FALSE){
 		} else {
 			$_SESSION['user_id'] = $login;
 			header('Location: index.php');
-			exit();
+			exit;
 		}
 	}
 }else{

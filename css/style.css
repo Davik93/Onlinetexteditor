@@ -156,14 +156,10 @@ ul{
     right:0;
     bottom:0;
     overflow: hidden;
-    border:red solid 1px;
     position: absolute;
 }
 .codemirrorholder{
-    border:blue solid 1px;
-    float: right;
     margin-top: 10px;
-    margin-right: 10px;
 }
 
 /*Login page and reg page*/

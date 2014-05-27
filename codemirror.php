@@ -1,5 +1,4 @@
 <?php
-
 $user_id = $_SESSION['user_id'];
 $username = getusername($user_id);
 
@@ -38,12 +37,14 @@ if (isset($_POST['laddaFil'])) {
 	remove_project($project);
 	
 	header("Location: index.php");
-	exit();
+	exit;
+} else if (isset($_POST['visaProjekt'])) {
+	// path to the project
+	$projectPath = './Users/'.$username.'/'.$projectName .'/';
+	header('Location: '.$projectPath.'');
+	exit;
 }
-
-
 ?>
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -70,17 +71,19 @@ if ($handle = opendir('./Users/'.$username.'/'.$projectName.'/')) {
 
 </select>
 
-<input type="submit" value="Ladda" name="laddaFil">
+<input type="submit" value="Ladda" name="laddaFil" />
 
-<input type="text" name="fileName" value="<?php  if(!empty($select)) echo $select;?>">
+<input type="text" name="fileName" value="<?php if(!empty($select)) echo $select;?>" />
 
-<input type="submit" value="Spara" name="spara">
+<input type="submit" value="Spara" name="spara" />
 
-<input type="submit" onclick="return(confirm('Är du säker på att du vill ta bort?'));" value="Ta bort" name="taBortFil">
+<input type="submit" onclick="return(confirm('Är du säker på att du vill ta bort?'));" value="Ta bort" name="taBortFil" />
 
 <input type="submit" onclick="return(confirm('Är du säker på att du vill ta bort projektet: <?php echo $projectName ?>
 \n Du kan inte ångra dig sen.'));" 
-value="Ta bort Projekt" name="taBortProjekt">
+value="Ta bort Projekt" name="taBortProjekt" />
+
+<input type="submit" value="Visa Projekt" name="visaProjekt" />
 
 <div class="codemirrorholder">
 <textarea rows="4" cols="50" id="codeEdit" name="codeEdit">

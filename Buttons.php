@@ -34,7 +34,7 @@ include './Dialogboxes/dialogboxes.php';
 
             <ul class="sub">
                 <li id="create-database">Create database</li> 
-                <li><a class="submenubtn" href="http://localhost/phpmyadmin/index.php" target="_blank">Handle Tables</a></li>
+                <li><a class="submenubtn" href="http://217.208.72.142/phpmyadmin/index.php" target="_blank">Handle Tables</a></li>
             </ul>
         </li>
         <li><a class="menubtn" href="#">Settings</a>

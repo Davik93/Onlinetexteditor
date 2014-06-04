@@ -163,18 +163,13 @@ ul{
     overflow: scroll; 
     position: absolute;
 }
-.editor-menuholder{
 
-    width: 200px;
-    float: left;
-}
 
-#edit-holder-code{
+#edit-holder{
     position: absolute;
-    top: 40px;
+    top: 30px;
     right: 40px;
     left: 120px;
-    bottom: 40px;
 }
 .header-holder-edit{
     height: 40px;

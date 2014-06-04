@@ -46,7 +46,7 @@ if (isset($_POST['laddaFil'])) {
 
 <form action="" method="post">
 
-    <div id="edit-holder-code">
+    <div id="edit-holder">
         <div class="header-holder-edit">
             <div class="load-holder">
                 <select name="select">

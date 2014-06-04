@@ -82,10 +82,9 @@ if (isset($_POST['laddaFil'])) {
         <textarea rows="4" cols="50" id="codeEdit" name="codeEdit">
 <?php
 if (!empty($file)) {
-echo htmlentities(file_get_contents($file));
+    echo htmlentities(file_get_contents($file));
 }
 ?>
-
         </textarea>
         <div class="footer-holder">
             <div class="name-holder-code">

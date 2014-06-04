@@ -186,7 +186,7 @@ ul{
 }
 .load-holder select{
    height:  20px;
-   width: 100px;
+   width: 150px;
    font-size: 12pt;
 }
 .showdelete-holder{
@@ -238,6 +238,8 @@ ul{
     text-align: center;
     text-decoration:none;
 }
+
+
 
 /*Login page and reg page*/
 .title{

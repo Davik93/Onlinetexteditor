@@ -49,12 +49,9 @@ include './Dialogboxes/dialogboxes.php';
 
 
 <script>
-    $(window).load(function() {
-        $("li").click(function() {
-            $('li > ul').not($(this).children("ul").toggle()).hide();
-
-        });
-        
-    });
-   
+$(window).load(function() {
+    $("li").click(function() {
+        $('li > ul').not($(this).children("ul").toggle()).hide();
+    });      
+});   
 </script>

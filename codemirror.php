@@ -5,7 +5,6 @@ $username = getusername($user_id);
 $projectName = $_GET['project'];
 
 if (isset($_POST['laddaFil'])) {
-
     $select = $_POST['select'];
     $file = './Users/' . $username . '/' . $projectName . '/' . $select;
 } else if (isset($_POST['spara'])) {
@@ -81,12 +80,11 @@ if (isset($_POST['laddaFil'])) {
 
 
         <textarea rows="4" cols="50" id="codeEdit" name="codeEdit">
-
-            <?php
-            if (!empty($file)) {
-                echo htmlentities(file_get_contents($file));
-            }
-            ?>
+<?php
+if (!empty($file)) {
+echo htmlentities(file_get_contents($file));
+}
+?>
 
         </textarea>
         <div class="footer-holder">

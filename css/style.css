@@ -40,10 +40,12 @@ body {
     width: 600px;
 }
 .headerholder{
-    
-    margin-left: 30%;
+    margin-right:35%;
+    margin-left:35%;
     margin-top: 20px;
     margin-bottom: 100px;
+    position: absolute;
+    border: black solid 1px;
 }
 
 /*Menu code starts here*/
